@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Daily Standups</title>
+</head>
+<body>
+
+	<form action="{% url 'standups:index' %}" method="POST">
+
+		{% csrf_token %}
+		<h1>Yesterday</h1>
+		<input type="textarea" name="yesterday">
+
+		<h1>Today</h1>
+		<input type="textarea" name="today">
+		
+		<h1>Blocker</h1>
+		<input type="textarea" name="blocker">
+
+		<input type="submit" name="submit">
+	</form>
+
+</body>
+</html>
